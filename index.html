@@ -133,9 +133,20 @@ fbq('track', 'PageView');
       Simple, clear, and community-focused.
     </p>
 
-    <a class="btn" href="https://telegram.me/+TlPStgRVMR4yOTc1">
-      🚀 Join Telegram Now
-    </a>
+    <a class="btn"
+   href="https://telegram.me/+TlPStgRVMR4yOTc1"
+   onclick="
+     if(!subscribed){
+       fbq('track','Subscribe', { value: 0, currency: 'INR' });
+       subscribed = true;
+     }
+     setTimeout(function(){
+       window.location.href='https://telegram.me/+TlPStgRVMR4yOTc1';
+     }, 800);
+     return false;
+   ">
+   🚀 Join Telegram Now
+</a>
 
     <!-- Logo (button ke niche) -->
     <div class="logoBox">
@@ -150,4 +161,5 @@ fbq('track', 'PageView');
   </main>
 </body>
 </html>
+
 
